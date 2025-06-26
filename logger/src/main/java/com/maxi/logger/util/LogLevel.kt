@@ -1,4 +1,4 @@
-package com.maxi.logger
+package com.maxi.logger.util
 
 internal object LogLevel {
 
