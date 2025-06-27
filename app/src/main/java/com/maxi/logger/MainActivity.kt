@@ -1,7 +1,6 @@
 package com.maxi.logger
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -16,7 +15,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.maxi.logger.ui.theme.LoggerTheme
 
@@ -49,7 +47,7 @@ fun App(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth(.8f),
             onClick = {
-                Logger.v(TAG, "This is a VERBOSE log.")
+                //
             }
         ) {
             Text(text = "Verbose Log")
@@ -59,7 +57,7 @@ fun App(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth(.8f),
             onClick = {
-                Logger.d(TAG, "This is a DEBUG log.")
+                //
             }
         ) {
             Text(text = "Debug Log")
@@ -69,7 +67,7 @@ fun App(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth(.8f),
             onClick = {
-                Logger.i(TAG, "This is an INFO log.")
+                //
             }
         ) {
             Text(text = "Info Log")
@@ -79,7 +77,7 @@ fun App(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth(.8f),
             onClick = {
-                Logger.w(TAG, "This is a WARNING log.")
+                //
             }
         ) {
             Text(text = "Warning Log")
@@ -89,7 +87,7 @@ fun App(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth(.8f),
             onClick = {
-                Logger.e(TAG, "This is an ERROR log.")
+                //
             }
         ) {
             Text(text = "Error Log")
