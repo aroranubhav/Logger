@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.maven)
 }
 
 android {
@@ -40,4 +41,17 @@ dependencies {
 
     //gson
     implementation(libs.gson.converter)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.aroranubhav"
+                artifactId = "logger"
+                version = "1.0.0"
+            }
+        }
+    }
 }
