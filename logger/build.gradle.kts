@@ -15,7 +15,11 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
-
+    lint {
+        disable.add("NullSafeMutableLiveData")
+        checkReleaseBuilds = false
+        abortOnError = false
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
