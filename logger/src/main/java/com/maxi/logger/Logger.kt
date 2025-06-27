@@ -26,7 +26,6 @@ import java.io.File
 
 class Logger private constructor(
     context: Context,
-    private val maxFileSize: Long,
     private val writeToFile: Boolean
 ) {
 
@@ -49,13 +48,11 @@ class Logger private constructor(
 
         fun getInstance(
             context: Context,
-            maxFileSize: Long,
             writeToFile: Boolean = false
         ): Logger {
             return INSTANCE ?: synchronized(this) {
                 INSTANCE ?: Logger(
                     context.applicationContext,
-                    maxFileSize,
                     writeToFile
                 ).also {
                     INSTANCE = it
