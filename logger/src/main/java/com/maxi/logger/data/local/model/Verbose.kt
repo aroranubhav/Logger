@@ -10,5 +10,7 @@ internal data class Verbose(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     @SerializedName("message")
-    val message: String = ""
+    val message: String = "",
+    @SerializedName("date")
+    val date: String
 )
