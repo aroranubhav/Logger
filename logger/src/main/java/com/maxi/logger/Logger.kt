@@ -181,7 +181,3 @@ class Logger private constructor(
         job.cancel()
     }
 }
-
-/**
- * //TODO: enable, disable write to file,  file names option?
- */
